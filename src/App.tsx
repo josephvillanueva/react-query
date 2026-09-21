@@ -55,7 +55,7 @@ export default function App() {
           <h1>Backlog Board</h1>
           <p className="byline">
             Built by{" "}
-            <a href="https://joseph-react-portfolio.vercel.app">
+            <a href="https://joseph-villanueva-portfolio.vercel.app">
               Joseph Villanueva
             </a>
           </p>
