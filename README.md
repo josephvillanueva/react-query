@@ -12,6 +12,12 @@ A product backlog board built with React and TanStack Query. It demonstrates how
 4. **Open a story.** Its details were prefetched when you hovered, and the dialog renders from cached board data with no spinner.
 5. Click **Open Query Devtools** to inspect every cache entry live.
 
+## Architecture
+
+![Backlog Board architecture: React components call query hooks, which patch the QueryClient cache and call a simulated API that persists to localStorage](docs/architecture.svg)
+
+Everything runs in the browser. The cache sits between the UI and the simulated API: writes patch it first and keep a snapshot, and a rejected save restores that snapshot and raises a single toast from the `MutationCache`.
+
 ## How it works
 
 | Behaviour | Implementation |
